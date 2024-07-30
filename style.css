@@ -66,6 +66,8 @@ body {
 	font-size: 15px;
 }
 .navbar a {
+	padding: 5px 10px;
+	border-radius: 10px;
 	display: inline-block;
 	font-size: 25px;
 	color: #2d4356;
@@ -83,7 +85,10 @@ body {
 	text-decoration: underline;
 	color: #190952;
 }
-
+.navbar .active {
+	color: #fff;
+	background-color: #347e88cc;
+}
 .home {
 	position: relative;
 	/* width: 100%; */
@@ -95,8 +100,8 @@ body {
 	background-size: cover;
 	background-position: center;
 	display: flex;
+	padding: 15px 0;
 	padding-left: 5%;
-	padding-bottom: 15px;
 }
 .home-text {
 	display: flex;
@@ -214,6 +219,109 @@ p.btn:hover {
 .about .img {
 	padding-right: 50px;
 }
+
+.products {
+	background: url(elec/layered-waves-haikei.svg);
+	background-size: cover;
+	padding: 20px;
+	/* height: 300px; */
+	/* z-index: 0; */
+}
+
+.products h1 {
+	padding: 30px;
+	padding-top: 35px;
+	color: aquamarine;
+	font-size: 50px;
+	text-align: center;
+	text-decoration: underline;
+}
+
+.items {
+	display: flex;
+	justify-content: space-evenly;
+}
+
+.card {
+	position: relative;
+	width: 300px;
+	height: 200px;
+	transition: transform 0.5s;
+	transform-style: preserve-3d;
+	cursor: pointer;
+	border-radius: 25px;
+	background-color: white;
+}
+
+.card img {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+}
+.front {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	/* box-shadow: 0px 0px 10px white; */
+	backface-visibility: hidden;
+	border: solid black;
+	border-radius: 10%;
+	overflow: hidden;
+}
+
+.back {
+	border: solid black;
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	padding: 10px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	/* box-shadow: 0px 0px 10px white; */
+	text-align: center;
+	backface-visibility: hidden;
+	border-radius: 10%;
+	background: #72d2df;
+}
+.back p {
+	color: white;
+	font-weight: 800;
+	text-transform: uppercase;
+	background: #081b29;
+	transition: all 0.4s;
+	padding: 5px;
+}
+.back p:hover {
+	transform: scale(1.2);
+	border-top-left-radius: 15px;
+	border-bottom-right-radius: 15px;
+	color: whitesmoke;
+	background: #190952;
+}
+
+.card:hover,
+.back {
+	transform: rotatey(-180deg);
+}
+summary {
+	color: rgb(2, 2, 90);
+	font-size: 20px;
+	font-weight: 600;
+	font-family: "EB Garamond", serif;
+	margin: 10px;
+	padding: 10px;
+	text-decoration: underline;
+	text-transform: uppercase;
+}
+/*
+.products svg {
+	position: absolute;
+	bottom: 0;
+	z-index: -1;
+} */
+
 footer {
 	width: 100%;
 	background-color: #347e88;
@@ -227,7 +335,7 @@ footer p {
 }
 
 .contact {
-	padding: 10px 0p;
+	padding: 30px 0;
 	background-color: #081b29;
 	display: flex;
 	/* align-items: center; */
