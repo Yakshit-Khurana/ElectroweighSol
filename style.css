@@ -96,6 +96,7 @@ body {
 	background-position: center;
 	display: flex;
 	padding-left: 5%;
+	padding-bottom: 15px;
 }
 .home-text {
 	display: flex;
